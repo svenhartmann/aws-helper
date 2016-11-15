@@ -1,0 +1,7 @@
+<% stacks.each do |_key, stack| %>
+    h2.<%= stack[:stack].name %>
+    | Status | Name | IP |
+    <% stack[:instances].each do |instance| %>
+      |  <%= instance[:status] %> | <%= instance[:hostname] %> |  <%= instance[:private_ip] %> |
+    <% end %>
+<% end %>

@@ -1,0 +1,17 @@
+<% stacks.each do |_key, stack| %>
+    <h1><%= stack[:stack].name %></h1>
+    <table>
+      <tr>
+        <th>Status</th>
+        <th>Name</th>
+        <th>IP</th>
+      </tr>
+    <% stack[:instances].each do |instance| %>
+          <tr>
+            <td><%= instance[:status] %> </td>
+            <td><%= instance[:hostname] %> </td>
+            <td><%= instance[:private_ip] %> </td>
+          </tr>
+    <% end %>
+      </table>
+<% end %>

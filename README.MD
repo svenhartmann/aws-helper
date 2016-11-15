@@ -7,7 +7,7 @@ $ export AWS_SECRET_ACCESS_KEY=<KEY>
 $ export AWS_REGION=<region>
 ```
 
-[AWS Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)
+[AWS Regions and Endpoints](http://`docs.aws.amazon.com/general/latest/gr/rande.html)
 
 ### CloudFront
 #### Invalidation
@@ -15,4 +15,8 @@ $ export AWS_REGION=<region>
 $ bundle exec ruby CloudFront/Distribution/Invalidation.rb -d <Distribution-ID> -p '/path/to/file.css'
 ```
 
-
+### OpsWorks
+#### Describe (Stack + Instances)
+```sh
+$ bundle exec ruby OpsWorks/Stack/Describe.rb -t OpsWorks/Template/confluence.erb
+``
